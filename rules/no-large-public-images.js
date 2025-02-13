@@ -63,6 +63,22 @@ module.exports = {
         }
       } catch (error) {
         // Handle error if file cannot be accessed
+        if (error.code === "ENOENT") {
+          context.report({
+            node,
+            message: `Image '${importPath}' not found.`,
+          });
+        } else if (error.code === "EACCES") {
+          context.report({
+            node,
+            message: `Permission denied when accessing image '${importPath}'.`,
+          });
+        } else {
+          context.report({
+            node,
+            message: `Error accessing image '${importPath}': ${error.message}`,
+          });
+        }
       }
     }
 

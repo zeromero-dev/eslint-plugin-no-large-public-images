@@ -1,9 +1,9 @@
 {
   "name": "eslint-plugin-publicimage",
   "version": "1.0.0",
-  "description": "prevent large image imports from public folder",
-  "license": "ISC",
-  "author": "zeromero-dev",
+  "description": "Prevent large image imports from public folder",
+  "license": "MIT",
+  "author": "zeromero-dev (holubenko.job@gmail.com)",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
